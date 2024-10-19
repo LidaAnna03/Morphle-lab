@@ -7,16 +7,14 @@ app = Flask(__name__)
 
 @app.route('/htop')
 def htop():
-    # Get full name
-    name = "Lida Anna Joshy"  # Replace with your full name
+    
+    name = "Lida Anna Joshy"  
 
-    # Get system username
     username = os.getenv('USER') or os.getenv('USERNAME') or 'Unknown User'
 
-    # Get server time in IST
     ist_time = time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime(time.time() + 5.5 * 3600))
 
-    # Simulated top output
+
     top_output = """
     PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
     1 root      20   0  225412   7052   4004 S   0.0   0.4   0:01.02 systemd
